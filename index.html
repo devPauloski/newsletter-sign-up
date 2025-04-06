@@ -15,24 +15,26 @@
       <article>
         <div class="wrapper">
           <picture class="thumbnail-wrapper">
-            <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 45em)" />
+            <source srcset="./assets/images/illustration-sign-up-desktop.svg" media="(min-width: 48em)" />
             <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Sign up illustration" />
           </picture>
-          <div>
+          <div class="description-wrapper">
             <h2>Stay updated!</h2>
             <p>Join 60,000+ product managers receiving monthly updates on:</p>
-            <ul>
+            <ul role="list">
               <li>Product discovery and building what matters</li>
               <li>Measuring to ensure updates are a success</li>
               <li>And much more!</li>
             </ul>
-            <form>
+            <form novalidate>
               <div class="form-group">
-                <label for="email">Email address</label>
+                <div class="flex-group">
+                  <label for="email">Email address</label>
+                  <span id="error" aria-live="polite"></span>
+                </div>
                 <input type="email" id="email" name="email" placeholder="email@company.com" />
-                <span id="error" aria-live="polite"></span>
               </div>
-              <button type="submit">Subscribe to monthly newsletter</button>
+              <button type="submit" class="subscribe-btn">Subscribe to monthly newsletter</button>
             </form>
           </div>
         </div>

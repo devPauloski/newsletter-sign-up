@@ -43,6 +43,11 @@ body {
   min-block-size: 100vh;
 }
 
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
 img,
 picture,
 svg {
@@ -55,6 +60,29 @@ body {
   font-family: var(--ff-primary);
   font-size: 1rem;
   font-weight: var(--fw-regular);
+  background-color: var(--clr-blue-700);
+  color: var(--clr-blue-800);
+}
+
+h2 {
+  /* @link https://utopia.fyi/clamp/calculator?a=320,1240,24—48&p=fs */
+  --fs-24-48: clamp(1.5rem, 0.9783rem + 2.6087vw, 3rem);
+
+  font-size: var(--fs-24-48);
+  font-weight: var(--fw-bold);
+  color: var(--clr-blue-800);
+  line-height: 1.125;
+  margin-block-end: 1.5rem;
+}
+
+@media (min-width: 48em) {
+  body {
+    place-content: center;
+  }
+}
+
+input {
+  width: 100%;
 }
 
 /* Main content */
@@ -67,6 +95,99 @@ body {
   white-space: nowrap;
   width: 1px;
 }
+
+.wrapper {
+  max-inline-size: 30rem; 
+  margin-inline: auto;
+  background-color: var(--clr-white);
+  display: grid;
+}
+
+.description-wrapper {
+  padding-block: 2.625rem;
+  padding-inline: 5%;
+}
+
+.thumbnail-wrapper img {
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .wrapper {
+    max-inline-size: 58rem;
+    width: 94%;
+    grid-template-columns: 1fr 45%;
+    border-radius: 1.5rem;
+  }
+
+  .description-wrapper {
+    /* @link https://utopia.fyi/clamp/calculator?a=768,1240,30—60&p=space */
+    --space-30-60: clamp(1.875rem, -1.1758rem + 6.3559vw, 3.75rem);
+
+    order: 1;
+    padding: var(--space-30-60);
+    place-self: center;
+  }
+
+  .thumbnail-wrapper {
+    order: 2;
+    padding-block: 1.5rem;
+    padding-inline-end: 1.5rem;
+  }
+}
+
+h2 + p {
+  margin-block-end: 1.5rem;
+}
+
+ul {
+  margin-block-end: 1.75rem;
+}
+
+li {
+  background-image: url(./assets/images/icon-list.svg);
+  background-repeat: no-repeat;
+  background-position: 0 2px;
+  padding-inline-start: 2.5rem;
+}
+
+li:not(:last-child) {
+  margin-block-end: .75rem;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: .5rem;
+}
+
+label {
+  font-size: .875rem;
+  color: var(--clr-blue-800);
+  font-weight: var(--fw-bold);
+}
+
+#email {
+  /* appearance: none; */
+  border: 1px solid var(--clr-grey);
+  height: 3.5rem;
+  padding-inline: .875em;
+  border-radius: 8px;
+  margin-block-end: 12px;
+}
+
+.subscribe-btn {
+  cursor: pointer;
+  padding: 1.15em .875em;
+  width: 100%;
+  border: 0;
+  border-radius: .5rem;
+  background-color: var(--clr-blue-800);
+  color: var(--clr-white);
+  line-height: 1.2;
+}
+
 
 .hide {
   display: none;

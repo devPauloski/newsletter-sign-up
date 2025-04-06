@@ -1,0 +1,73 @@
+:root {
+  /* Colors */
+  --clr-red: hsl(4, 100%, 67%);
+  --clr-blue-800: hsl(234, 29%, 20%);
+  --clr-blue-700: hsl(235, 18%, 26%);
+  --clr-grey: hsl(0, 0%,58%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --ff-primary: "Roboto", sans-serif;
+  
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  line-height: 1.5;
+  min-block-size: 100vh;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/* General styling */
+body {
+  font-family: var(--ff-primary);
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+}
+
+/* Main content */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.hide {
+  display: none;
+}

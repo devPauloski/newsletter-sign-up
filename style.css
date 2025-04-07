@@ -64,6 +64,12 @@ body {
   color: var(--clr-blue-800);
 }
 
+@media (min-width: 48em) {
+  body {
+    place-content: center;
+  }
+}
+
 h2 {
   /* @link https://utopia.fyi/clamp/calculator?a=320,1240,24—48&p=fs */
   --fs-24-48: clamp(1.5rem, 0.9783rem + 2.6087vw, 3rem);
@@ -73,12 +79,6 @@ h2 {
   color: var(--clr-blue-800);
   line-height: 1.125;
   margin-block-end: 1.5rem;
-}
-
-@media (min-width: 48em) {
-  body {
-    place-content: center;
-  }
 }
 
 input {
@@ -117,6 +117,7 @@ input {
     max-inline-size: 58rem;
     width: 94%;
     grid-template-columns: 1fr 45%;
+    place-items: center;
     border-radius: 1.5rem;
   }
 
@@ -126,7 +127,6 @@ input {
 
     order: 1;
     padding: var(--space-30-60);
-    place-self: center;
   }
 
   .thumbnail-wrapper {
@@ -159,6 +159,7 @@ li:not(:last-child) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: .5rem;
   margin-block: .5rem;
 }
 
@@ -170,11 +171,12 @@ label {
 
 #email {
   /* appearance: none; */
+  cursor: pointer;
   border: 1px solid var(--clr-grey);
   height: 3.5rem;
   padding-inline: .875em;
-  border-radius: 8px;
-  margin-block-end: 12px;
+  border-radius: .5rem;
+  margin-block-end: .75rem;
 }
 
 .subscribe-btn {
@@ -188,6 +190,60 @@ label {
   line-height: 1.2;
 }
 
+.subscribe-btn:hover {
+  background: linear-gradient(45deg, hsl(347, 100%, 66%), var(--clr-red));
+}
+
+.subscribe-btn:focus-visible {
+  outline: 2px solid var(--clr-blue-700);
+  outline-offset: 1px;
+}
+
+.successful-message-section {
+  background-color: var(--clr-white);
+  max-inline-size: 31.5rem;
+  margin-inline: auto;
+  padding-inline: 5%;
+}
+
+@media(min-width: 48em) {
+  .successful-message-section {
+    padding: 3.75rem;
+    border-radius: 1.5rem;
+  }
+}
+
+@media(width < 48em) {
+  .successful-message-wrapper {
+    padding-block: 146px 200px;
+  }
+}
+
+.icon {
+  width: 4.125rem;
+  aspect-ratio: 1;
+  margin-block-end: 2.5rem;
+}
+
+.successful-message-description {
+  margin-block-end: 2.5rem;
+}
+
+.dismiss-btn {
+  padding: 1.15em .875em;
+  width: 100%;
+  border: 0;
+  border-radius: .5rem;
+  background-color: var(--clr-blue-800);
+  color: var(--clr-white);
+  line-height: 1.2;
+}
+
+@media(width < 48em) {
+  .dismiss-btn {
+    margin-block-end: 2rem;
+  }
+}
 
 .hide {
   display: none;

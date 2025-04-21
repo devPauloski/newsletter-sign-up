@@ -197,6 +197,7 @@ label {
 #email.invalid {
   border-color: var(--clr-red);
   background-color: hsl(5, 100%, 95%);
+  color: var(--clr-red);
 }
 
 #email:hover {

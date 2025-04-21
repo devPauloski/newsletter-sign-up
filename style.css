@@ -260,6 +260,7 @@ label {
 
 .email-address {
   font-weight: var(--fw-bold);
+  overflow-wrap: break-word;
 }
 
 .dismiss-btn {

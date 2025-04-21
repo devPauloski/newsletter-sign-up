@@ -194,6 +194,11 @@ label {
   margin-block-end: 0.75rem;
 }
 
+#email.invalid {
+  border-color: var(--clr-red);
+  background-color: hsl(5, 100%, 95%);
+}
+
 #email:hover {
   border: 2px solid var(--clr-blue-800);
 }
@@ -215,7 +220,7 @@ label {
 }
 
 .subscribe-btn:hover {
-  background: linear-gradient(45deg, hsl(347, 100%, 66%), var(--clr-red));
+  background: linear-gradient(45deg, hsl(346, 99%, 66%), hsl(13, 99%, 62%));
 }
 
 .subscribe-btn:focus-visible {
@@ -239,7 +244,7 @@ label {
 
 @media (width < 48em) {
   .successful-message-wrapper {
-    padding-block: 146px 200px;
+    padding-block: 9.125rem 12.5rem;
   }
 }
 
@@ -253,7 +258,12 @@ label {
   margin-block-end: 2.5rem;
 }
 
+.email-address {
+  font-weight: var(--fw-bold);
+}
+
 .dismiss-btn {
+  cursor: pointer;
   padding: 1.15em 0.875em;
   width: 100%;
   border: 0;
@@ -269,6 +279,23 @@ label {
   }
 }
 
+.dismiss-btn:hover {
+  background: linear-gradient(45deg, hsl(346, 99%, 66%), hsl(13, 99%, 62%));
+}
+
+.dismiss-btn:focus-visible {
+  outline: 2px solid var(--clr-blue-700);
+  outline-offset: 1px;
+}
+
 .hide {
   display: none;
 }
+
+.active {
+  color: var(--clr-red);
+  font-size: .875rem;
+  font-weight: var(--fw-bold);
+}
+
+

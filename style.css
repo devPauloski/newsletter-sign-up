@@ -197,6 +197,9 @@ label {
 #email.invalid {
   border-color: var(--clr-red);
   background-color: hsl(5, 100%, 95%);
+}
+
+#email.invalid::placeholder {
   color: var(--clr-red);
 }
 
@@ -209,7 +212,7 @@ label {
   outline: 2px solid var(--clr-blue-800);
 }
 
-.subscribe-btn {
+.button {
   cursor: pointer;
   padding: 1.15em 0.875em;
   width: 100%;
@@ -220,11 +223,12 @@ label {
   line-height: 1.2;
 }
 
-.subscribe-btn:hover {
+.button:hover {
   background: linear-gradient(45deg, hsl(346, 99%, 66%), hsl(13, 99%, 62%));
+  box-shadow: 5px 5px 20px hsla(13, 99%, 62%, 0.75);
 }
 
-.subscribe-btn:focus-visible {
+.button:focus-visible {
   outline: 2px solid var(--clr-blue-700);
   outline-offset: 1px;
 }
@@ -264,30 +268,10 @@ label {
   overflow-wrap: break-word;
 }
 
-.dismiss-btn {
-  cursor: pointer;
-  padding: 1.15em 0.875em;
-  width: 100%;
-  border: 0;
-  border-radius: 0.5rem;
-  background-color: var(--clr-blue-800);
-  color: var(--clr-white);
-  line-height: 1.2;
-}
-
 @media (width < 48em) {
   .dismiss-btn {
     margin-block-end: 2rem;
   }
-}
-
-.dismiss-btn:hover {
-  background: linear-gradient(45deg, hsl(346, 99%, 66%), hsl(13, 99%, 62%));
-}
-
-.dismiss-btn:focus-visible {
-  outline: 2px solid var(--clr-blue-700);
-  outline-offset: 1px;
 }
 
 .hide {

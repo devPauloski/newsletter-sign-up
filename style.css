@@ -197,9 +197,6 @@ label {
 #email.invalid {
   border-color: var(--clr-red);
   background-color: hsl(5, 100%, 95%);
-}
-
-#email.invalid::placeholder {
   color: var(--clr-red);
 }
 

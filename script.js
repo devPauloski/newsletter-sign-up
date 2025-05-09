@@ -2,7 +2,7 @@ const form = document.querySelector("form");
 const email = document.getElementById("email");
 const dismissButton = document.querySelector(".dismiss-btn");
 const hoverStates = document.querySelectorAll(".hover-state");
-const desktopImageEdges = document.getElementById("a");
+const desktopImageCorners = document.getElementById("a");
 const illustrationSection = document.querySelector(".illustration-section");
 const successfulMessageSection = document.querySelector(".successful-message-section");
 const error = document.getElementById("error");
@@ -10,16 +10,16 @@ const emailAddress = document.querySelector(".email-address");
 
 hoverStates.forEach((element) => {
   element.addEventListener("mouseover", () => {
-    desktopImageEdges.style.rx = "0";
+    desktopImageCorners.setAttribute("rx", "0");
   });
 
   element.addEventListener("mouseleave", () => {
-    desktopImageEdges.style.rx = "1rem";
+    desktopImageCorners.setAttribute("rx", "1rem");
   });
 })
 
 const emailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
- 
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
